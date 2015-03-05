@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Kategori</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Baslik</th>
+                <td>{{ entity.baslik }}</td>
+            </tr>
+            <tr>
+                <th>Yazar</th>
+                <td>{{ entity.yazar }}</td>
+            </tr>
+            <tr>
+                <th>Aciklama</th>
+                <td>{{ entity.aciklama }}</td>
+            </tr>
+            <tr>
+                <th>Aktif</th>
+                <td>{{ entity.aktif }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('kategori') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('kategori_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

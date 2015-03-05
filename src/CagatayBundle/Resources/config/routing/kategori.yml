@@ -1,0 +1,30 @@
+kategori:
+    path:     /
+    defaults: { _controller: "CagatayBundle:Kategori:index" }
+
+kategori_show:
+    path:     /{id}/show
+    defaults: { _controller: "CagatayBundle:Kategori:show" }
+
+kategori_new:
+    path:     /new
+    defaults: { _controller: "CagatayBundle:Kategori:new" }
+
+kategori_create:
+    path:     /create
+    defaults: { _controller: "CagatayBundle:Kategori:create" }
+    requirements: { _method: post }
+
+kategori_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CagatayBundle:Kategori:edit" }
+
+kategori_update:
+    path:     /{id}/update
+    defaults: { _controller: "CagatayBundle:Kategori:update" }
+    requirements: { _method: post|put }
+
+kategori_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CagatayBundle:Kategori:delete" }
+    requirements: { _method: post|delete }

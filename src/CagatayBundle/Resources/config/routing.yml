@@ -1,0 +1,11 @@
+cagatay_yazi:
+    resource: "@CagatayBundle/Resources/config/routing/yazi.yml"
+    prefix:   /yazi
+
+cagatay_kategori:
+    resource: "@CagatayBundle/Resources/config/routing/kategori.yml"
+    prefix:   /kategori
+
+cagatay_homepage:
+    path:     /
+    defaults: { _controller: CagatayBundle:Default:index }

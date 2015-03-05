@@ -1,0 +1,11 @@
+deneme:
+    resource: "@DenemeBundle/Resources/config/routing.yml"
+    prefix:   /deneme
+
+cagatay:
+    resource: "@CagatayBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

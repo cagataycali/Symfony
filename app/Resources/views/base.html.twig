@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script type="text/javascript" src="{{ asset('js/bugra.js') }}"></script>
+    </head>
+    <body style="background: #808080;">
+
+
+    <a href="{{ path('kategori') }}">Kategoriler</a>
+    -
+    <a href="{{ path('yazi') }}">Yazılar</a>
+
+        {% block body %}Buğraaaa{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

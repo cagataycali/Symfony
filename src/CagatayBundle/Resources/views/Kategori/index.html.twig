@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Kategori list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Baslik</th>
+                <th>Yazar</th>
+                <th>Aciklama</th>
+                <th>Aktif</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('kategori_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.baslik }}</td>
+                <td>{{ entity.yazar }}</td>
+                <td>{{ entity.aciklama }}</td>
+                <td>{{ entity.aktif }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('kategori_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('kategori_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('kategori_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

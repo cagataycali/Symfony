@@ -1,0 +1,30 @@
+yazi:
+    path:     /
+    defaults: { _controller: "CagatayBundle:Yazi:index" }
+
+yazi_show:
+    path:     /{id}/show
+    defaults: { _controller: "CagatayBundle:Yazi:show" }
+
+yazi_new:
+    path:     /yeni
+    defaults: { _controller: "CagatayBundle:Yazi:yeni" }
+
+yazi_create:
+    path:     /create
+    defaults: { _controller: "CagatayBundle:Yazi:create" }
+    requirements: { _method: post }
+
+yazi_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CagatayBundle:Yazi:edit" }
+
+yazi_update:
+    path:     /{id}/update
+    defaults: { _controller: "CagatayBundle:Yazi:update" }
+    requirements: { _method: post|put }
+
+yazi_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CagatayBundle:Yazi:delete" }
+    requirements: { _method: post|delete }
